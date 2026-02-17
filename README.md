@@ -51,7 +51,7 @@ NETWORK-1 : Les communications réseau doivent utiliser TLS avec une configurati
 
 5) MASTG : 2 idées de tests
 
-TVérifier si les fichiers de préférences partagées contiennent des informations sensibles en clair en les examinant directement dans /data/data/[package_name]/shared_prefs/ .
+Vérifier si les fichiers de préférences partagées contiennent des informations sensibles en clair en les examinant directement dans /data/data/[package_name]/shared_prefs/ .
 Analyser les logs de l'application avec adb logcat pour détecter des fuites d'informations sensibles pendant l'exécution
 
 
