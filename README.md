@@ -43,20 +43,15 @@ Chaque étape vérifie la signature de la précédente pour s’assurer qu’auc
 
 3) 8 risques du rooting + 8 mesures défensives
 
+![Capture TP 2](6.png)
 
-4️⃣ MASVS : 2 exigences résumées
-Exigence MASVS	Description courte
-MASVS-1	L’application doit protéger les données sensibles en mémoire et sur le stockage
-MASVS-2	L’application doit détecter si le device est rooté et réagir en conséquence
-5️⃣ MASTG : 2 idées de tests
-Test MASTG	Objectif
-MASTG-1	Vérifier que l’application ne s’exécute pas sur un device rooté ou avec bootloader unlock
-MASTG-2	Tester la résistance aux modifications de fichiers système via overlayfs ou remount
-6️⃣ Fiche environnement remplie
-Élément	Détails
-App testée	DivaApplication.apk
-Version	SDK 23 (APK)
-Support	AVD API 29+ (rooté)
-Objectif	Observer root et protections Verified Boot
-Données	Fictives
-Réseau	Réseau local de test
+4) MASVS : 2 exigences résumées
+STORAGE-1 : Les données sensibles comme les API keys, mots de passe ou tokens doivent être stockées de manière sécurisée en utilisant des fonctions de chiffrement appropriées.
+NETWORK-1 : Les communications réseau doivent utiliser TLS avec une configuration correcte et vérifier les certificats.
+
+5) MASTG : 2 idées de tests
+
+TVérifier si les fichiers de préférences partagées contiennent des informations sensibles en clair en les examinant directement dans /data/data/[package_name]/shared_prefs/ .
+Analyser les logs de l'application avec adb logcat pour détecter des fuites d'informations sensibles pendant l'exécution
+
+
