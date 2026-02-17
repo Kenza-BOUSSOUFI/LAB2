@@ -17,7 +17,7 @@ Réseau : "Test"
 
 ![Capture TP 2](4.png)
 
-nterprétation des résultats : 
+Interprétation des résultats : 
 uid=0 = privilèges root confirmés.
 L'AVD est en état orange -> l’intégrité du système n’est plus garantie.
 adb shell getprop ro.boot.veritymode:
